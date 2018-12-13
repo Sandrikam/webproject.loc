@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^page/([20-a-zA-Z0-9_-]+)$    					        page.php?act=$1
+RewriteRule ^page/([a-zA-Z0-9_-]+)/$                        page.php?act=$1
+
+RewriteRule ^page/activation/([a-zA-Z0-9_-]+)$              page.php?act=activation&code=$1
+RewriteRule ^page/activation/([a-zA-Z0-9_-]+)/$             page.php?act=activation&code=$1
