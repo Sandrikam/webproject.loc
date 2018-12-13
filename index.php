@@ -92,7 +92,7 @@
               </div>
               <br />
               <div class="form-group">
-                <button type="button" class="btn btn-lg btn-primary" onclick="ShareURLs()">Share URLs</button>
+                <button type="button" class="Share URL Button" onclick="ShareURLs()">Share URLs</button>
               </div>
             </form>
 
