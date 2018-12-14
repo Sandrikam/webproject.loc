@@ -92,7 +92,7 @@
               </div>
               <br />
               <div class="form-group">
-                <button type="button" class="btn btn-primary" onclick="ShareURLs()">Share URLs</button>
+                <button type="button" class="btn btn-primary" onclick="ShareURLs()" id="shareUrl">Share URLs</button>
               </div>
             </form>
 
@@ -130,20 +130,41 @@
                 var AllTag = '';
                 var AllDescription = '';
 
+                var links = [];
+
                 var i;
                 for (i = 1; i <= RowsCount; i++)
                 {
                     var index = document.getElementById("TableURLs").rows[i].cells[0].innerHTML;
+                    
                     var URLVal = document.getElementsByName("URL"+index)[0].value;
                     var TagVal = document.getElementsByName("Tag"+index)[0].value;
                     var DescriptionVal = document.getElementsByName("Description"+index)[0].value;
+
+
+                        link = {
+                            url: URLVal,
+                            tag: TagVal,
+                            desc: DescriptionVal
+                        };
+                        links.push(link)
 
                     AllURL += '|~|' + URLVal;
                     AllTag += '|~|' + TagVal;
                     AllDescription += '|~|' + DescriptionVal;
                 }
+
+              
+                    localStorage.setItem('items', JSON.stringify(links));
+
               }
+              
             </script>
+            
+              <div class="container " onclick="shareURLs()" id="finish">
+              <a href="index.html" target="_blank" class="display-4" id="text">https://www.link-share.com/yourNewurl</a>
+                 </div>
+
           </div>
 
         <!--</div>
@@ -338,5 +359,6 @@
     <script src="./js/freelancer.js"></script>
     <!-- <script src="./js/authorization.js"></script> -->
     <script src=".parse.js"></script>
+
   </body>
 </html>
