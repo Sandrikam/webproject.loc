@@ -92,7 +92,7 @@
               </div>
               <br />
               <div class="form-group">
-                <button type="button" class="Share URL Button" onclick="ShareURLs()">Share URLs</button>
+                <button type="button" class="btn btn-primary" onclick="ShareURLs()">Share URLs</button>
               </div>
             </form>
 
@@ -146,13 +146,13 @@
             </script>
           </div>
 
-        </div>
+        <!--</div>
         <h4 class="text-center text-secondary">
           Only authorised users can create links.
           <a class="nav-link portfolio-item py-3 px-0 px-lg-3 rounded" onClick="ShowForm('SigninBox')" href="#authorization-modal">Sign in</a>
           to continue.
         </h4>
-      </div>
+      </div>-->
     </section>
 
     <!-- About Section -->
@@ -337,6 +337,6 @@
     <!-- Custom scripts for this template -->
     <script src="./js/freelancer.js"></script>
     <!-- <script src="./js/authorization.js"></script> -->
-    <script src="./js/parse.js"></script>
+    <script src=".parse.js"></script>
   </body>
 </html>
