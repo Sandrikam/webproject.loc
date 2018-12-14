@@ -142,12 +142,14 @@
                     var DescriptionVal = document.getElementsByName("Description"+index)[0].value;
 
 
-                        link = {
-                            url: URLVal,
-                            tag: TagVal,
-                            desc: DescriptionVal
-                        };
-                        links.push(link)
+             link = {
+              url: URLVal,
+              tag: TagVal,
+              desc: DescriptionVal
+              };
+          links.push(link)
+          console.log(link);
+          localStorage.setItem('items', JSON.stringify(links));
 
                     AllURL += '|~|' + URLVal;
                     AllTag += '|~|' + TagVal;
@@ -155,14 +157,14 @@
                 }
 
               
-                    localStorage.setItem('items', JSON.stringify(links));
+                    
 
               }
               
             </script>
             
-              <div class="container " onclick="shareURLs()" id="finish">
-              <a href="index.html" target="_blank" class="display-4" id="text">https://www.link-share.com/yourNewurl</a>
+              <div class="container " onclick="" id="finish">
+              <a href="index.html" target="_blank" class="display-5" id="text">https://www.link-share.com/yourNewurl</a>
                  </div>
 
           </div>

@@ -35,18 +35,11 @@
           <!--Link Row-->
           <div class="row">
                <script type="text/javascript">
-                const data = JSON.parse(localStorage.getItem('items'));
+                const data = JSON.parse(localStorage.getItem('items',link));
                 </script> 
                 <div class="col-lg-10 mx-auto">
                   <table id="TableURLs" class="table order-list">
-                    <thead>
-                      <tr>
-                        <th scope="col" width="5%">#</th>
-                        <th scope="col" width="30%">URL</th>
-                        <th scope="col" width="15%">Tag</th>
-                        <th scope="col" width="50%">Description</th>
-                      </tr>
-                    </thead>
+                   
                     <tbody>
                       <tr>
                         <th scope="row">1</th>
@@ -63,6 +56,6 @@
 
 
 
-
+<script src="./js/main.js"></script>
     </body>
   </html>
